@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Saludador } from './saludador/saludador';
+import { DestinoViaje } from './destino-viaje/destino-viaje';
+import { ListaDestinos } from './lista-destinos/lista-destinos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Saludador],
+  imports: [RouterOutlet, DestinoViaje, ListaDestinos],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
