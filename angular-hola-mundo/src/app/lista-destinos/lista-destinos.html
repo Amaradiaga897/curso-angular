@@ -21,9 +21,21 @@
             </div>
             <div class="form-group">
               <label for="Imagen	Url">Imagen Url</label>
-              <input type="text" class="form-control" id="imagenUrl" placeholder="Ingresar	url..." #url/>
+              <input
+                type="text"
+                class="form-control"
+                id="imagenUrl"
+                placeholder="Ingresar	url..."
+                #url
+              />
             </div>
-            <button type="submit" class="btn btn-primary" (click)="guardar(nombre.value, url.value)" >Guardar!</button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              (click)="guardar(nombre.value, url.value)"
+            >
+              Guardar!
+            </button>
           </form>
         </div>
       </div>
@@ -31,6 +43,11 @@
   </div>
   <hr class="mb-5" />
   <div class="row row-flex">
-    <app-destino-viaje *ngFor="let d of destinos" [destino]="d"></app-destino-viaje>
+    <app-destino-viaje
+      *ngFor="let d of destinos; let i = index"
+      [destino]="d"
+      [idx]="i+1"
+      (clicked)="elegido($event)"
+    ></app-destino-viaje>
   </div>
 </div>
